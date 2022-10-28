@@ -1,0 +1,53 @@
+/* /* grow the div when the input is checked   */
+* {
+    margin: 0;
+    font-family: sans-serif;
+
+}
+
+li {
+    list-style: none;
+    padding: 40px 10px;
+    font-size: 5.5rem;
+    font-weight: bolder;
+    letter-spacing: -8px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(217, 240, 173);
+    text-transform: uppercase;
+    transition: all 1s;
+}
+a:hover {
+    text-shadow: 0 0 10px rgba(166, 245, 231, 0.5);
+}
+
+.box {
+    width: 600px;
+    height: 100vh;
+    background: #000;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    transform: translateX(-50vw);
+    display: grid;
+    place-items: center;
+}
+
+input:checked+.box {
+    transform: translateX(0);
+    background: rgb(39, 34, 42);
+    opacity: 1;
+}
+
+h1 {
+    opacity: 0;
+    font-size: 100px;
+    color: yellow;
+    transition: all 1s;
+}
+
+input:checked+.box>h1 {
+    font-size: 10px;
+    opacity: 1;
+}
